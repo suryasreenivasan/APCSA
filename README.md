@@ -1,2 +1,2 @@
 # APCSA
-Compiled Course Work from AP Computer Science A
+This repository contains all the concepts, projects, and practice problems learned in AP Computer Science A. It covers core Java fundamentals including variables, conditionals, loops, methods, classes and objects, arrays, ArrayLists, inheritance, polymorphism, recursion, and basic data structures. The code reflects progress throughout the course and demonstrates problem-solving, algorithmic thinking, and object-oriented programming skills.
