@@ -1,0 +1,15 @@
+
+public class RationalCalculator {
+
+	public static void main(String[] args) {
+		Rational r1 = new Rational();
+		System.out.println("Current global value: " + r1);
+		while (true) {
+			System.out.println("------------------------------------------------");
+			System.out.println("-------------------Main Menu--------------------");
+		}
+
+	}
+	
+
+}

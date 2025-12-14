@@ -1,0 +1,24 @@
+
+public class TestTV {
+
+	public static void main(String[] args) {
+		TV myTV = new TV();
+		System.out.println(myTV.toString());
+		myTV.turnOn();
+		myTV.setChannel(100);
+		myTV.setVolume(5);
+		System.out.println(myTV.toString());
+		myTV.channelDown();
+		System.out.println(myTV.toString());
+		myTV.channelUp();
+		System.out.println(myTV.toString());
+		myTV.volumeDown();
+		System.out.println(myTV.toString());
+		myTV.volumeUp();
+		System.out.println(myTV.toString());
+		myTV.turnOff();
+		System.out.println(myTV.toString());
+
+	}
+
+}

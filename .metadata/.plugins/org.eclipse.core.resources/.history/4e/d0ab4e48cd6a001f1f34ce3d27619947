@@ -1,0 +1,27 @@
+import java.util.*; 
+public class Lab03_2 {
+
+	public static void main(String[] args) {
+		
+		System.out.print("Enter a, b, c for ax^2 + bx + c = 0: ");
+		Scanner input = new Scanner(System.in);
+		double a = input.nextDouble();
+		double b = input.nextDouble();
+		double c = input.nextDouble();
+		input.close();
+		double discriminant = b * b - 4 * a * c;
+		if (discriminant>0) {
+			double root1 = (-b + Math.sqrt(discriminant))/ (2 * a);
+			double root2 = (-b - Math.sqrt(discriminant))/ (2 * a);
+			System.out.println("2 real solutions: " + root1 + "," + root2);
+		}
+		else if (discriminant == 0) {
+			double root0 = (-b + Math.sqrt(discriminant))/ (2 * a);
+			System.out.println("1 real solution: " + root0); 
+		}
+		else {
+			System.out.println("No real soultion");
+		}
+	}
+
+}

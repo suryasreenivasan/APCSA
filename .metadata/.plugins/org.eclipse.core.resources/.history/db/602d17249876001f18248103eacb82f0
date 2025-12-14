@@ -1,0 +1,16 @@
+import java.util.*;
+public class floatingpoint {
+
+	public static void main(String[] args) {
+		System.out.println("Enter a floating point number: ");
+		Scanner scanner = new Scanner(System.in);
+		double user = scanner.nextDouble();
+		scanner.close();
+		
+		String number = user + "";
+		int digits = number.indexOf(".");
+		System.out.println("The number of digits before the decimal point in " + user + " is " + digits);
+
+	}
+
+}

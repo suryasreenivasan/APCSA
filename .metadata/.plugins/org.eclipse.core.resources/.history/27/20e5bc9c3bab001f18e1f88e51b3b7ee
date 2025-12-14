@@ -1,0 +1,9 @@
+import java.util.Arrays;
+
+public class depths {
+    public static void main(String[] args) {
+    String stringy = "hello guys";
+    char[] result = stringy.toCharArray();
+    System.out.println(Arrays.toString(result));
+    }
+}

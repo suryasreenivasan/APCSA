@@ -1,0 +1,25 @@
+import java.util.*;
+// 1100 - 12
+// 1100 1100
+// 204
+public class BinaryToDecimal {
+
+	public static void main(String[] args) {
+		System.out.print("Enter a binary number: ");
+		Scanner scanner = new Scanner(System.in);
+		int binary = scanner.nextInt();
+		scanner.close();
+		int decimal = 0;
+		int power = 0;
+		int length = binary.length();
+		while (length > 0) {
+			
+			int digit = binary % 10;
+			decimal += digit * Math.pow(2, power);
+			binary /= 10
+			power++;
+		}
+		System.out.println(decimal);
+	}
+
+}

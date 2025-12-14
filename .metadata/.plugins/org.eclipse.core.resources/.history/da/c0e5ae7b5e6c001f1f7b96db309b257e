@@ -1,0 +1,49 @@
+
+public class pickacard {
+
+	public static void main(String[] args) {
+		
+		System.out.print("the card you picked: ");
+		final int NUMBER_OF_CARDS = 52;
+		int card = (int)(Math.random() * NUMBER_OF_CARDS);
+		
+		int rank = card % 13;
+		int suit = card / 13;
+		
+		
+		if (rank == 1) {
+			System.out.print("ace ");
+		}
+		
+		else if (rank == 11) {
+			System.out.print("jack ");
+		}
+		
+		else if (rank == 12) {
+			System.out.print("queen ");
+		}
+		
+		else if (rank == 0) {
+			System.out.print("king ");
+		} 
+		else {
+			System.out.print(rank + " ");
+		}
+		
+		if (suit == 0) {
+			System.out.print("of Clubs");
+		}
+		else if (suit == 1) {
+			System.out.print("of Hearts");
+		}
+		else if (suit ==2) {
+			System.out.print("of Diamonds");
+		}
+		else if (suit == 3) {
+			System.out.print("of Clovers");
+		}
+		
+		
+	}
+
+}

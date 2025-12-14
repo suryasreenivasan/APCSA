@@ -1,0 +1,24 @@
+import java.util.*;
+public class rockPaperSciccors {
+
+	public static void main(String[] args) {
+		System.out.print("Rock(0), Paper(1), Scissors(2): ");
+		Scanner scanner = new Scanner(System.in);
+		int user = scanner.nextInt();
+		scanner.close();
+		int computer = (int)(Math.random()*3);
+
+		
+		if (user == computer) {
+			System.out.print("You: " + " --- Computer: " + ". Draw.");
+		}
+		if (computer > user) {
+			if (computer > user++) {
+				
+			}
+		}
+		int x1 = 1;
+		System.out.println(++x1);
+	}
+
+}

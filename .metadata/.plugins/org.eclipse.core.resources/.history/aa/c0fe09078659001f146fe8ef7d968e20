@@ -1,0 +1,17 @@
+	
+	public class Practice2 {
+	
+		public static void main(String[] args) {
+		
+			sytem.out.println("");
+			double radius = 2;
+			double area;
+			
+			area = radius * radius * 3.14159265;
+			
+			
+		System.out.println("area of circle with radius " + radius + " is " + area + ".");
+			
+		}
+	
+	}

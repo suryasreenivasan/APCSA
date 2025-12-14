@@ -1,0 +1,20 @@
+public class Circle {
+	double radius = 1.0;
+	Circle() {
+		
+	}
+	Circle (double r) {
+		radius = r;
+	}
+	double getArea() {
+		return radius * radius * Math.PI;
+	}
+	
+	double getPerimeter() {
+		return 2 * Math.PI * radius;
+	}
+	public String toString() {
+		return "This circle's radius: " + radius;
+	}
+	
+}

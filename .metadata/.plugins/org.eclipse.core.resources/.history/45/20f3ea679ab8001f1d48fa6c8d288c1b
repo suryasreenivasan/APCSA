@@ -1,0 +1,13 @@
+
+public class TestRectangle {
+
+	public static void main(String[] args) {
+		Rectangle r1 = new Rectangle();
+		Rectangle r2 = new Rectangle(2, 3);
+		System.out.println(r1);
+		System.out.println(square.toString());
+		System.out.println("the width of the triangle is " + square.getWidth());
+		System.out.println("the area of the triangle is " + square.getArea());
+	}
+
+}

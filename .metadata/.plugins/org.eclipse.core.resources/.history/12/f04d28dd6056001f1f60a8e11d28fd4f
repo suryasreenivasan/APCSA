@@ -1,0 +1,15 @@
+/* Name: Surya Sreenivasan / 10
+ * Date: 8/9/2024
+ * Lab1.1 Display a Pattern of 100
+ */
+
+
+public class Lab01_1 {
+
+	public static void main(String[] args) {
+		
+		System.out.print("1  0000  0000 \n1  0  0  0  0 \n1  0  0  0  0\n1  0  0  0  0\n1  0000  0000");
+		System.out.println("Skibidi Toilet");
+	}
+
+}

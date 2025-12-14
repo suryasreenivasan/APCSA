@@ -1,0 +1,9 @@
+import java.util.*;
+public class FiveCards {
+	
+	public static void main(String[] args) {
+		static final int NUMBER_OF_CARDS = 5;
+		
+	}
+
+}

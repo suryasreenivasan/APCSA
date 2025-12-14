@@ -1,0 +1,11 @@
+
+public class CheckingAccount extends Account {
+	private double draftFee = 50;
+	private double overDraftFee = 100;
+	private double lowBalanceFee = 10;
+	
+	public CheckingAccount() {
+		
+	}
+	
+}

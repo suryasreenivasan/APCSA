@@ -1,0 +1,70 @@
+/* Name : Surya Sreenivasan / 10
+ * Date : 09/18/2024
+ * Lab 4.5 binary to decimal
+ */
+// 1010 - 10
+// 0001 - 1 
+// 1234 - invalid
+// 010 - invalid
+import java.util.*;
+public class binaryToDecimal {
+
+	public static void main(String[] args) {
+		System.out.print("Enter 4-digit binary: ");
+		Scanner scanner = new Scanner(System.in);
+		String user = scanner.nextLine();
+		scanner.close();
+		
+		int decimal = 0;
+		
+		if (user.substring(3).equals("1")) {
+			decimal += 1 * (int)(Math.pow(2,0));
+		}
+		else if (user.substring(3).equals("0")) {
+			decimal += decimal + 0;
+		}
+		else {
+			System.out.println("bad input, do better.");
+			System.exit(decimal);
+		}
+		
+		
+		if (user.substring(2,3).equals("1")) {
+			decimal = decimal + 1 * (int)(Math.pow(2,1));
+		}
+		else if (user.substring(3).equals("0")) {
+			decimal = decimal + 0;
+		}
+		else {
+			System.out.println("bad input, do better.");
+			System.exit(decimal);
+		}
+		
+		
+		if (user.substring(1,2).equals("1")) {
+			decimal = decimal + 1 * (int)(Math.pow(2,2));
+		}
+		else if (user.substring(3).equals("0")) {
+			decimal = decimal + 0;
+		}
+		else {
+			System.out.println("bad input, do better.");
+			System.exit(decimal);
+		}
+		
+		
+		if (user.substring(0,1).equals("1")) {
+			decimal = decimal + 1 * (int)(Math.pow(2,3));
+		}
+		else if (user.substring(3).equals("0")) {
+			decimal = decimal + 0;
+		}
+		else {
+			System.out.println("bad input, do better.");
+			System.exit(decimal);
+		}
+		
+
+	}
+
+}

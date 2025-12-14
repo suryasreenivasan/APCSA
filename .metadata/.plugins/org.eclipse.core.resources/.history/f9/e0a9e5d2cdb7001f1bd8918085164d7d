@@ -1,0 +1,16 @@
+
+public class TV {
+
+	private int currentChannel = 1; // 1-120
+	private int volumeLevel = 1; // 1-7
+	private boolean on = false;
+	
+	public TV() {
+		
+	}
+	
+	public void turnOn() {
+		
+	}
+
+}

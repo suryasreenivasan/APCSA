@@ -1,0 +1,28 @@
+
+public class Circle {
+	double radius = 1.0;
+	String color;
+	Circle() {
+		
+	}
+	Circle (double r) {
+		radius = r;
+	}
+	Circle (double r, String c) {
+		radius = r;
+		color = c;
+	}
+	double getArea() {
+		return radius * radius * Math.PI;
+	}
+	
+	double getPerimeter() {
+		return 2 * Math.PI * radius;
+	}
+	public String toString() {
+		return "This circle's radius: " + radius + " color: " + color;
+	}
+	String color() {
+	}
+	
+}

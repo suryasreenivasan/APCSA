@@ -1,0 +1,13 @@
+
+public class Practice1 {
+
+	public static void main(String[] args) {
+		
+		System.out.print("100 F is ___");
+		System.out.print(5.0/9*(100-32));
+		System.out.print("__ C");
+		
+	}
+
+}
+

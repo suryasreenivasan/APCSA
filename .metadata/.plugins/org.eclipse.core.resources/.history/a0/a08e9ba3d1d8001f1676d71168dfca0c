@@ -1,0 +1,59 @@
+import java.util.*;
+
+public class ArrayLists {
+
+	public static void main(String[] args) {
+		/*
+		ArrayList<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(2);
+		list.add(1);
+		list.add(1);
+		System.out.println(list);
+		/* for (int i = 0; i < list.size(); i++) {
+			if(list.get(i) == 1) {
+				list.remove(i);
+				i = 0;
+			}
+		}
+		
+		
+		for (int i = list.size() - 1; i >= 0; i--) {
+			if (list.get(i) == 1) {
+				list.remove(i);
+			}
+		}
+		System.out.println(list);
+*/
+		/*
+		ArrayList<String> cities = new ArrayList<>();
+		cities.add("sacremento");
+		cities.add("los Angeles");
+		cities.add("san diego");
+		cities.add("san jose");
+		cities.add("san francisco");
+		System.out.println(cities);
+		System.out.println(cities.size());
+		System.out.println("is los angeles in list " + cities.contains("los Angeles"));
+		System.out.println(cities.indexOf("los Angeles"));
+		System.out.println("is roblox in the list " + cities.contains("roblox"));
+		System.out.println(cities.indexOf("roblox"));
+		System.out.println(cities.remove(cities.size() - 1));
+		System.out.println(cities);
+		for (int i = cities.size() -1; i >= 0; i--) {
+			System.out.println(cities.get(i));
+		}
+		*/
+		
+		ArrayList<CircL> circles = new ArrayList<>();
+		circles.add(new CircL());
+		circles.add(new CircL(25));
+		circles.add(new CircL(38, "green", false));
+		circles.add(new CircL(2));
+		System.out.println(circles);
+		for (int i = 0; i < circles.size() - 1; i++) {		
+			System.out.println(circles.get(i).getArea());
+		}
+	}
+
+}

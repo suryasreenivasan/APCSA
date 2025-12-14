@@ -1,0 +1,33 @@
+
+public class PrimeNumbers {
+
+	public static void main(String[] args) {
+		final int NUM_OF_PRIME = 50;
+		int count = 0;
+		int prime = 2;
+		boolean isPrime;
+		while (count < NUM_OF_PRIME) {
+			isPrime = true;
+			for (int k = 2; k <= (prime / 2); k++) {
+				if ((prime % k) == 0 ) {
+						isPrime = false;
+						break;
+				}
+			
+			}
+			if (isPrime) {
+				count++; 
+				if ((prime % 10) == 0) {
+					System.out.println(prime);
+				}
+				else {
+					System.out.println(prime + " ");
+				}
+			}
+			prime++;
+			
+		}
+		
+	}
+
+}

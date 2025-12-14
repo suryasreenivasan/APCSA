@@ -1,0 +1,21 @@
+/* Name : Surya Sreenivasan /10
+ * Date : 08/12/2024
+ * Lab 1.4 Write a program that displays something cool
+ */
+public class Lab01_4 {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("    C");
+		System.out.println("   C");
+		System.out.println("  C");
+		System.out.println(" C");
+		System.out.println("C");
+		System.out.println(" C");
+		System.out.println("  C");
+		System.out.println("    C");
+		System.out.println("    C");
+
+	}
+
+}

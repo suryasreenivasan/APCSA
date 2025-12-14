@@ -1,0 +1,23 @@
+import java.util.*;
+public class DistinctNumbers {
+
+	public static void main(String[] args) {
+		System.out.println("enter 10 numbers: ");
+		Scanner scanner = new Scanner(System.in);
+		int[] user = new int[10];
+		for (int i = 0; i < user.length; i++) {
+			user[i] = scanner.nextInt();
+		}
+		scanner.close();
+		Arrays.sort(user);
+		int[] end;
+		for (int i = 0; i < user.length; i++) {
+			
+		}
+		System.out.println("number of distinct numbers is ");
+		System.out.println(Arrays.toString(user));
+
+	}
+	
+
+}

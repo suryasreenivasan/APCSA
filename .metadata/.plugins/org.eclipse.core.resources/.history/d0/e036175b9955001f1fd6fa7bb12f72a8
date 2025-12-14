@@ -1,0 +1,13 @@
+	
+	public class Practice1 {
+	
+		public static void main(String[] args) {
+			
+			// System.out.print("100 F is ");
+			// System.out.print(" Celsius Degree(s)");
+			
+			System.out.print((int)Math.round(5.0/9*(100-32)));
+		}
+	
+	}
+	

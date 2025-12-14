@@ -1,0 +1,16 @@
+
+public class TuitionIncrease {
+
+	public static void main(String[] args) {
+		double currentTuition = 10000;
+		double tuition = currentTuition;
+		int year = 0;
+		while (tuition < (2 * currentTuition)) {
+			year++;
+			tuition += tuition * 0.07;
+		}
+		tuition = ((int)(tuition * 100 + 0.5)) / 100;
+		System.out.println("current tuition is $" + currentTuition + " will be doubled as " + tuition + " in " + year + " years.");
+	}
+
+}

@@ -1,0 +1,49 @@
+import java.util.*;
+/* 4
+ * cat
+ * 20 
+ * bee
+ * 100 
+ * donkey
+ * 90
+ * ant
+ * 50
+ */
+public class SortStudents {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the size of the list: ");
+		int size = scanner.nextInt();
+		String[] students = new String[size];
+		double[] scores = new double[size];
+		for (int i = 0; i < size; i++) {
+			System.out.print("enter the name of the student: ");
+			students[i] = scanner.next();
+			System.out.print("enter the score of the student: ");
+			scores[i] = scanner.nextDouble();
+		}
+		scanner.close();
+	
+		for (int i = 0; i < size; i++) {
+			System.out.println(students[i] + ": " + scores[i]);
+		}
+	}
+	
+	public static void sort(String[] names, double[] scores) {
+		int n = scores.length;
+		for (int i = 0; i < n - 1; i++) {
+			for (int j = i + 1; j < n; j++) {
+				if (scores[i] < scores[j]) {
+					double tempScore = scores[i];
+					scores[i] = scores[j];
+					scores[j] = tempScore;
+					String tempName = names[i];
+					names[i] = names[j];
+					names[j] = tempName;
+				}
+			}
+		}
+	}
+
+}

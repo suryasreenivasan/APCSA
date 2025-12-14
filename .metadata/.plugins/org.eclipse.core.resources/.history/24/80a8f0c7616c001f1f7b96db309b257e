@@ -1,0 +1,34 @@
+/* Name : Surya Sreenivasan / 10
+ * Date : 09/06/2024
+ * Lab 3.7 Point in a Rectangle
+ */
+
+// -5, -1 
+// -6, 0
+import java.util.*;
+public class Lab03_7 {
+
+	public static void main(String[] args) {
+		System.out.print("Sample 1: \nEnter x and y for a point location: ");
+		Scanner input = new Scanner(System.in);
+		double x1 = input.nextDouble();
+		double y1 = input.nextDouble();
+		input.close();
+		double dx1 = Math.abs(x1);
+		double dy1 = Math.abs(y1);
+		double halfWidth = 10.0 / 2;
+		double halfHeight = 5.0 / 2;
+		if (dx1 <= halfWidth && dy1 <= halfHeight ) {
+			System.out.print("Point (" + dx1 + ", " + dy1 + ") is inside of the rectangle");
+		}
+		
+		
+		System.out.print("Sample 1: \nEnter x and y for a point location: ");
+		Scanner input2 = new Scanner(System.in);
+		double x2 = input2.nextDouble();
+		double y2 = input2.nextDouble();
+		input2.close();
+
+	}
+
+}

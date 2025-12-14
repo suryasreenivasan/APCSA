@@ -1,0 +1,49 @@
+//visualize the hanged man
+import java.util.*;
+public class HangedMan {
+	
+	public static Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		System.out.println("do you want to play hangman (y/n)");
+		if (scanner.nextLine().toLowerCase().charAt(0) == 'y') {
+			
+		}
+		else {
+			System.out.println("no hangman :(");
+			System.exit(0);
+		}
+		
+		
+		
+	}
+	
+	public static String getWord() {
+		Random random = new Random();
+		String[] wordBank = {
+				"sachin",
+				"jonah",
+				"eddie",
+				"javaw",
+				"roblox",
+				"harshal"
+		};
+		return wordBank[random.nextInt(6)];
+	}
+
+}
+
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;

@@ -1,0 +1,130 @@
+import java.util.*;
+
+public class HangedMan {
+
+    public static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        do {
+            String word = getWord();
+            playHangman(word);
+
+            System.out.println("Do you want to play again? (y/n): ");
+        } while (scanner.nextLine().toLowerCase().charAt(0) == 'y');
+        System.out.println("Thanks for playing!");
+    }
+
+    public static String getWord() {
+        String[] words = { 
+        		"eddie",
+        		"java",
+        		"sachin",
+        		"eclipse",
+        		"harshal",
+        		"lucky",
+        		"omar",
+        		"bhuvan",
+        		"cactus",
+        		"computer",
+        		"mushroom"
+        };
+        Random random = new Random();
+        return words[random.nextInt(words.length)];
+    }
+
+    public static void playHangman(String s) {
+    	
+        char[] word = s.toCharArray();
+        char[] display = new char[word.length];
+        for (int i = 0; i < display.length; i++) {
+            display[i] = '*';
+        }
+
+        int misses = 0;
+        int maxMisses = 7;
+
+        while (misses < maxMisses) {
+            drawStickman(misses);
+            System.out.println("Word: " +Arrays.toString(display));
+            System.out.println("Misses: " + misses);
+
+            System.out.print("Enter a letter: ");
+            String guess = scanner.nextLine();
+
+            if (guess.length() != 1) {
+                System.out.println("Please enter a single letter.");
+                continue;
+            }
+
+            char guessedLetter = guess.charAt(0);
+            boolean correctGuess = false;
+
+            for (int i = 0; i < word.length; i++) {
+                if (word[i] == guessedLetter) {
+                    if (display[i] == guessedLetter) {
+                        System.out.println("You already guessed this letter!");
+                        correctGuess = true;
+                        break;
+                    }
+                    display[i] = guessedLetter;
+                    correctGuess = true;
+                }
+            }
+
+            if (!correctGuess) {
+                System.out.println("Incorrect guess!");
+                misses++;
+            }
+
+            if (display.toString().equals(s)) {
+                drawStickman(misses);
+                System.out.println("Congratulations! You guessed the word: " + s);
+                System.out.println("Misses: " + misses);
+                return;
+            }
+        }
+        drawStickman(misses); 
+        System.out.println("Game Over! The correct word was: " + s);
+    }
+
+ 
+        public static void drawStickman(int misses) {
+            if (misses < 0 || misses > 7) {
+                return;
+            }
+            System.out.println("   +---+");
+            System.out.println("   |   |");
+            if (misses >= 1) {
+                System.out.println("   O   |");
+            } else {
+                System.out.println("       |");
+            }
+
+            if (misses >= 4) {
+                System.out.println("  /|\\  |");
+            } else if (misses == 3) {
+                System.out.println("  /|   |");
+            } else if (misses >= 2) {
+                System.out.println("   |   |");
+            } else {
+                System.out.println("       |");
+            }
+            if (misses >= 6) {
+                System.out.println("  / \\  |");
+            } else if (misses == 5) {
+                System.out.println("  /    |");
+            } else {
+                System.out.println("       |");
+            }
+            System.out.println("       |");
+            System.out.println("  =======");
+        }
+
+/*
+ * O
+  /|\
+  / \
+ 
+ */
+
+}

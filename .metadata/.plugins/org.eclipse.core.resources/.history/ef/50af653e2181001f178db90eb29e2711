@@ -1,0 +1,79 @@
+import java.util.*;
+public class MathTutor {
+
+	public static void main(String[] args) {
+		int n1 = 0, n2 = 0 , answer = 0;
+		Random random = new Random();
+		boolean tutor = true;
+		Scanner scanner = new Scanner(System.in);
+		while (tutor) {
+			System.out.println("\n          Main Menu ");
+			System.out.println("----------------------------------");
+			System.out.println("1: Addition \n2: Subtraction \n3: Multiplication \n4: Division\n5: Exit");
+			System.out.print("Enter your user: ");
+			
+			String user = scanner.nextLine();
+			while (!user.equals("1") && !user.equals("2") && !user.equals("3") && !user.equals("3") && !user.equals("4") && !user.equals("5")) {
+				System.out.println("stop fooling around! try again.");
+				user = scanner.nextLine();
+			}
+			int pick = Integer.parseInt(user);
+			
+			if (pick == 1) {
+				n1 = random.nextInt(10);
+				n2 = random.nextInt(10);
+				System.out.print("What is " + n1 + " + " + n2 + " = ");
+				answer = scanner.nextInt();
+				if (answer == (n1 + n2)) {
+					System.out.println("Correct.");
+				}
+				else {
+					System.out.println("Incorrect. " + n1 + " + " + n2 + " = " + (n1+n2));
+				}
+				
+			}
+			if (pick == 2) {
+				n1 = random.nextInt(10);
+				n2 = random.nextInt(10);
+				if (n2 > n1) {
+					int temp = n1;
+					n1 = n2;
+					n2 = temp;
+				}
+				System.out.print("What is " + n1 + " -  " + n2 + " = ");
+				answer = scanner.nextInt();
+				if (answer == (n1-n2)) {
+					System.out.println("Correct.");
+				}
+				else {
+					System.out.println("Incorrect. " + n1 + " - " + n2 + " = " + (n1-n2));
+				}
+			}
+			if (pick == 3) {
+				n1 = random.nextInt(10);
+				n2 = random.nextInt(10);
+				System.out.print("What is " + n1 + " * " + n2 + " =");
+				answer = scanner.nextInt();
+				if (answer == (n1*n2)) {
+					System.out.println("Correct.");
+				}
+				else {
+					System.out.println("Incorrect. " + n1 + " * " + n2 + " = " + (n1*n2));
+				}
+			}
+			if (pick == 4) {
+				n1 = random.nextInt(9) + 1;
+				n2 = random.nextInt(9) + 1;
+				System.out.print("What is");
+			}
+			if (pick == 5 ) {
+				System.out.println("Goodbye. Thanks for using Math Tutor!");
+				System.out.println("-------------------------------------------------------");
+				System.exit(pick);
+			}
+		}
+		scanner.close();
+	
+	}
+
+}

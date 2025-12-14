@@ -1,0 +1,16 @@
+import java.util.*;
+public class Compute_Money {
+
+	public static void main(String[] args) {
+
+		System.out.print("Enter amount of money in dollars.cents: ");
+		Scanner input = new Scanner(System.in);
+		
+		double amount = input.nextDouble();
+		integer money = (int)(amount * 100);
+		System.out.println(money);
+		
+	
+	}
+
+}

@@ -1,0 +1,9 @@
+import java.util.*;
+public class InitalizeArray {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

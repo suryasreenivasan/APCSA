@@ -1,0 +1,15 @@
+
+public class TestCircle {
+
+	public static void main(String[] args) {
+		
+	Circle c1 = new Circle();
+	System.out.println("c1's radius: " + c1.radius);
+	System.out.println("c1's area: " + c1.getArea());
+	System.out.println(c1);
+	Circle c2 = new Circle(10, "red");
+	System.out.println(c2);
+	
+	}
+
+}

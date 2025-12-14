@@ -1,0 +1,16 @@
+	
+	public class Practice1 {
+	
+		public static void main(String[] args) {
+			
+				System.out.print("100 Fahrenheit degree is ");
+				// System.out.print(5/9*(100-32));   
+				// integer divided by integer is always an integer, if the answer cannot be an integer it will be zero
+				System.out.print(Math.round(5.0/9*(100-32)));
+				// 5.0 is not an integer, and will give us a non-integer answer
+				System.out.print(" Celsius degrees.");
+				
+					}
+	}
+	
+

@@ -1,0 +1,25 @@
+// 10 - 1010
+// 012 - 1100
+// 123
+// 500
+import java.util.*;
+public class DecimalToBinary {
+
+	public static void main(String[] args) {
+		System.out.print("Enter a decimal number: ");
+		Scanner scanner = new Scanner(System.in);
+		int user = scanner.nextInt();
+		scanner.close();
+		String binary = "";
+		while (user > 0) {
+			binary = (user % 2) + binary;
+			user /= 2;
+		}
+		if (user == 0) {
+			binary = "0";
+		}
+		System.out.println("Binary value: " + binary);
+		
+	}
+
+}

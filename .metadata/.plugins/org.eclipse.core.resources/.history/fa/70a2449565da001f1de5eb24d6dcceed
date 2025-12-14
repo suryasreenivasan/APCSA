@@ -1,0 +1,49 @@
+import java.util.*;
+public class Account {
+	
+	private String name = "";
+	private int id;
+	private double balance = 0.0;
+	private ArrayList<Transaction> transactions = new ArrayList<>();
+	private double interestRate;
+	private Date dateCreated;
+	
+	public Account() {
+		
+	}
+	
+	public Account(String n, int ide, double bal) {
+		name = n;
+		id = ide;
+		balance = bal;
+		
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+	
+	public double getAnnualInterestRate() {
+		return interestRate;
+	}
+		
+	public void setID(int ide) {
+		id = ide;
+	}
+	
+	public void setBalance(int bal) {
+		balance = bal;
+		
+	}
+	
+	public void setAnnualInterestRate(double rt) {
+		interestRate = rt;
+	}
+	
+	
+
+}

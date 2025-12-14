@@ -1,0 +1,13 @@
+
+public class TestTV {
+
+	public static void main(String[] args) {
+		TV myTV = new TV();
+		myTV.turnOn();
+		myTV.setChannel(100);
+		myTV.setVolume(5);
+		
+
+	}
+
+}

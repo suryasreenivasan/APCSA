@@ -1,0 +1,26 @@
+/* Name : Surya Sreenivasan / 10
+ * Date : 08/22/2024
+ * Lab 2.5 Slope of a Line
+ */
+
+import java.util.Scanner;
+
+public class Lab02_5 {
+// 4.5 and -5.5
+// 6.6 -6.5
+// 0.4761904761904763
+	public static void main(String[] args) {
+		System.out.print("Enter x1 and y1: ");
+		Scanner input = new Scanner(System.in);
+		double x1 = input.nextDouble();
+		double y1 = input.nextDouble();
+		System.out.print("Enter x2 and y2");
+		double x2 = input.nextDouble();
+		double y2 = input.nextDouble();
+		input.close();
+		double slope = (y2-y1)/(x2-x1);
+		
+
+	}
+
+}

@@ -1,0 +1,14 @@
+	
+	public class Practice1 {
+	
+		public static void main(String[] args) {
+			
+				System.out.print("100 Fahrenheit degree is");
+				// System.out.print(5/9*(100-32));
+				System.out.print(5.0/9*(100-32));
+				System.out.print("Celsius degrees.");
+					}
+	
+	}
+	
+

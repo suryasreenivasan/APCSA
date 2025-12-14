@@ -1,0 +1,27 @@
+/* Name : Surya Sreenivasan / 10
+ * Date : 09/18/2024
+ * Lab 4.4 check substring
+ */
+// ABCD - AB
+// ABCD - ACD 
+// ABCD - A
+import java.util.*;
+public class indexOf {
+
+	public static void main(String[] args) {
+			System.out.print("Enter string s1: ");
+			Scanner scanner = new Scanner(System.in);
+			String s1 = scanner.nextLine();
+			System.out.print("Enter string s2: ");
+			String s2 = scanner.nextLine();
+			scanner.close();
+			if (s1.indexOf(s2) == -1) {
+				System.out.println(s2 + " is NOT a substring of " + s1);
+			}
+			else {
+				System.out.println(s2 + " is a substrnig of " + s1);
+			}
+			
+			
+	}
+}

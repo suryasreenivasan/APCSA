@@ -1,0 +1,19 @@
+
+public class BubbleSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void bubbleSort(double[] bubble) {
+		boolean swapped = true;
+		while(swapped) {
+			swapped = false;
+			for (int i = 0; i < bubble.length - 1; i++) {
+				if (bubble[i] > bubble[i + 1]) {
+					
+				}
+			}
+		}
+	}
+}

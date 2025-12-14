@@ -1,0 +1,10 @@
+
+public class RationalCalculator {
+
+	public static void main(String[] args) {
+		Rational r1 = new Rational();
+		System.out.println(r1);
+
+	}
+
+}

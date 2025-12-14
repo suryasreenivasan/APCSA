@@ -1,0 +1,35 @@
+import java.util.*;
+public class lotteryV2 {
+
+	public static void main(String[] args) {
+		
+		System.out.print("Enter your lottery pick(2-digit): ");
+		Scanner scanner = new Scanner(System.in);
+		String guess = scanner.nextLine().substring(0,2);
+		scanner.close();
+		
+		String guessD1 = guess.substring(0,1);
+		String guessD2 = guess.substring(1);
+		//String lotteryD1 = (int)(Math.random()*10) + "";
+		//String lotteryD2 = (int)(Math.random()*10) + "";
+		String lotteryD1 = 7 + "";
+		String lotteryD2 = 7 + "";
+		String lottery =  lotteryD1 + lotteryD2; 
+		System.out.println(lottery);
+		
+		if (lottery.equals(guess)) {
+			System.out.println("Exact Match: You win $10000!");
+		}
+		else if (guessD1.equals(lotteryD1) && guessD2.equals(lotteryD2)) {
+			System.out.println("Flipped match! - $3000");
+		}
+		else if (guessD1.equals(lotteryD1) || guessD2.equals(lotteryD2) || guessD1.equals(lotteryD2) || guessD2.equals(lotteryD1)) {
+			System.out.println("Match one digit - $1000");
+		}
+		else {
+			System.out.println("Do better.");
+		}
+
+	}
+
+}

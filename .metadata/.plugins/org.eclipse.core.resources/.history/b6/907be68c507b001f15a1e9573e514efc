@@ -1,0 +1,18 @@
+import java.util.*;
+public class DrawAPyramid {
+
+	public static void main(String[] args) {
+		System.out.print("enter size for a right triangle: ");
+		Scanner scanner = new Scanner(System.in);
+		int size = scanner.nextInt();
+		if (size > 100) {
+			System.out.println("too big");
+			System.exit(size);
+		}
+		scanner.close();
+		for (int k = 2; k <= 1; k++) {
+			System.out.print("*");
+		}
+	}
+
+}

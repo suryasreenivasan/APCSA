@@ -1,0 +1,12 @@
+
+public class stringpractice {
+
+	public static void main(String[] args) {
+		String welcomeMessage = "Welcome to Java.";
+		int length = welcomeMessage.length();
+		System.out.println(welcomeMessage);
+		System.out.println(length);
+		System.out.println("The length of the string " + welcomeMessage + " is " + length);
+	}
+
+}

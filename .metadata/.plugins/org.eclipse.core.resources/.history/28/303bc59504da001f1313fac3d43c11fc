@@ -1,0 +1,18 @@
+import java.util.*;
+public class Poker {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("play five cards!");
+		while (true) {
+			System.out.println("Scores for one-pair:  \t5");
+			System.out.println("\t\t two-pair: ");
+			System.out.println("\t\t triple:    \t5");
+			System.out.println("\t\t full house: :\t5");
+			break;
+			
+		}
+
+	}
+
+}

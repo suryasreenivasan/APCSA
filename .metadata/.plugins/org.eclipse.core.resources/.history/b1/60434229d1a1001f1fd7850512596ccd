@@ -1,0 +1,30 @@
+import java.util.*;
+public class SelectionSort {
+
+	public static void main(String[] args) {
+		int[] list = {2,9,5,4,8,1,6};
+		selectionSort(list);
+		System.out.println(Arrays.toString(list));
+
+	}
+	public static void selectionSort(int[] list) {
+		for (int i  = 0; i<list.length; i++) {
+			int min = list[i];
+			int indexMin = i;
+			// select minimum
+			for(int j = i + 1; j < list.length; j++) {
+				if (list[j] < min) {
+					min = list[j];
+					indexMin = j;
+				}
+			}
+			//swap the minimum witht the current element
+			if (list[i] != min) {
+				int temp = list[i];
+				list[i] = min;
+				list[indexMin] = temp;
+			}
+		}
+	}
+
+}

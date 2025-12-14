@@ -1,0 +1,11 @@
+import java.util.*;
+public class MathTutor {
+
+	public static void main(String[] args) {
+		while (1==1) {
+			System.out.println("          Main Menu ");
+			System.out.println("--------------------------");
+		}
+	}
+
+}

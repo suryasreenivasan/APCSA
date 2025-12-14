@@ -1,0 +1,11 @@
+
+public class currentTime {
+
+	public static void main(String[] args) {
+		
+		long milliseconds = System.currentTimeMillis();
+
+		int totalSeconds = ;
+	}
+
+}

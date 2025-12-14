@@ -1,0 +1,6 @@
+import java.util.*;
+public class FiveCards {
+	
+	static final int NUMBER_OF_CARDS = 5;
+	Card[] cards = new Card[5];
+}

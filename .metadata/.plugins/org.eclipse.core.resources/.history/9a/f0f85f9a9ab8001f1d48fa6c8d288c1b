@@ -1,0 +1,12 @@
+
+public class TestRectangle {
+
+	public static void main(String[] args) {
+		Rectangle r1 = new Rectangle();
+		Rectangle r2 = new Rectangle(2, 3);
+		System.out.println(r1);
+		System.out.println("the height and width are " + r2.getHeight() + " " + r2.getWidth() + " respectively");
+		
+	}
+
+}

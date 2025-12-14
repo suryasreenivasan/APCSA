@@ -1,0 +1,68 @@
+import java.util.*;
+class Card {
+	Random random = new Random();
+	private int rank;
+	private String suit;
+	private String[] rankList = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+	private String[] suitList = {"Spades", "Hearts", "Clubs", "Diamonds"};
+	
+	public Card() {
+		rank = 1;
+		suit = suitList[0];
+	}
+	public Card(int r, String s) {
+		if (r > 0 && r < 14) {
+			rank = r;
+		}
+		for (int i = 0; i < suitList.length; i++) {
+			if (s.equals(suitList[i])) {
+				suit = s; 
+				break;
+			}
+		}
+	}
+	
+	public Card(Card c) {
+		rank = c.rank;
+		suit = c.suit;
+	}
+	
+	public int getRank() {
+		return rank;
+	}
+	
+	public String getSuit() {
+		return suit;
+	}
+	
+	public static Card pickACard() {
+		int r = random.nextInt(13) + 1;
+		String s = suitList[random.nextInt(4)];
+		return new Card(r, s);
+	}
+	
+	public boolean beats(Card a) {
+		if (suit.equals(a.suit)) {
+			if(rank > a.rank) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean equals(Card a) {
+		return ((rank == a.rank) && (suit.equals(a.suit)));
+	}
+	@Override
+	public String toString() {
+		return rankList[rank - 1] + " of " + suit;
+	}
+	
+	public static void main(String[] args) {
+		Card card = new Card();
+		Card cardi = new Card(13, "Hearts");
+		Card cardy = new Card(13, "Spades");
+		Card cardo = Card.pickACard();
+	}
+
+}

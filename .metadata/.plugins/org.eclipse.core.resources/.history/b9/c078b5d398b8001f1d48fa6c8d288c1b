@@ -1,0 +1,11 @@
+
+public class TestRectangle {
+
+	public static void main(String[] args) {
+		Rectangle square = new Rectangle();
+		System.out.println(square.toString());
+
+
+	}
+
+}

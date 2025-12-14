@@ -1,0 +1,36 @@
+
+public class TestCircle {
+
+	public static void main(String[] args) {
+		/*	
+		Circle c1 = new Circle();
+		System.out.println("c1's radius: " + c1.radius);
+		System.out.println("c1's area: " + c1.getArea());
+		System.out.println(c1);
+		Circle c2 = new Circle(10, "red");
+		System.out.println(c2);
+		changeRadius(c1);
+	 */
+		int size = 5;
+		Circle[] circles = new Circle[size];
+		double sum = 0;
+		
+		for (int i = 0; i < size; i++) {
+		circles[i] = new Circle(Math.random() * 10);
+		System.out.printf("Radius: %.2f Area: %.2f%n", circles[i].getRadius(), circles[i].getArea());
+		sum += circles[i].getArea();
+		}
+		System.out.printf("Average area %.2f%n", sum/size);
+	}
+	
+	public static void changeRadius(Circle c) {
+		for (int i = 1; i <= 5; i++) {
+			c.setRadius(i * c.getRadius());
+			System.out.println("radius: " + c.getRadius() + " area: " + c.getArea()); 
+			._.
+			hello
+			"america"
+		}
+	}                  
+}
+

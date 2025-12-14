@@ -1,0 +1,130 @@
+import java.util.*;
+
+public class Account {
+	
+	private String name = "";
+	private int id;
+	private double balance = 0.0;
+	private ArrayList<Transaction> transactions = new ArrayList<Transaction>();
+	private static double annualInterestRate;
+	private Date dateCreated;
+	
+	public Account() {
+		dateCreated = new Date();
+	}
+	
+	public Account(String n, int ide, double bal) {
+		name = n;
+		id = ide;
+		balance = bal;
+		dateCreated = new Date();
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+	
+	public double getAnnualInterestRate() {
+		return annualInterestRate;
+	}
+		
+	public void setID(int ide) {
+		id = ide;
+	}
+	
+	public void setBalance(double bal) {
+		balance = bal;
+		
+	}
+	
+	public static void setAnnualInterestRate(double rt) {
+		annualInterestRate = rt;
+	}
+	
+	public Date getDate() {
+		return dateCreated;
+	}
+	
+	public double getMonthlyInterest() {
+		return (balance * annualInterestRate / 100) / 12;
+	}
+	
+	public  void withdraw(double amount) {
+		if (amount > 5000) {
+			System.out.println("Please wait, Procesing Request..");
+			int x = 0;
+			while (x < 100000) {
+				x++;
+			}
+			if (amount > 10000) {
+				System.out.println("Declined. If this is a legitimate request please contact Customer Support");
+				returnn;
+			}
+			
+			
+		}
+		balance -= amount;
+		transactions.add(new Transaction("W", amount, balance));
+	}
+	
+	public void deposit(double amount) {
+		balance += amount;
+		transactions.add(new Transaction("D", amount, balance));
+	}
+	
+	public String toString() {
+		return "Name: " + name + "   ID:" + id + "   Interest Rate: "+ annualInterestRate + " \nCurrent Balance: $ " + balance;
+	}
+	
+	public ArrayList<Transaction> getTransactions(){
+		return transactions;
+	}
+	public static void main(String[] args) {
+		
+		Account.setAnnualInterestRate(1.5);
+		Account account1 = new Account("George", 1122, 1000);
+		System.out.println(account1);
+		
+		account1.deposit(30);
+		account1.deposit(40);
+		account1.deposit(50);
+		account1.withdraw(5);
+		account1.withdraw(4);
+		account1.withdraw(2);
+	
+		for (Transaction e: account1.getTransactions()) {
+			System.out.println(e);
+		}
+		
+		System.out.println(account1);
+	}
+	
+	
+
+}
+
+
+class Transaction {	
+	private Date date;
+	private String type;
+	private double amount;
+	private double balance;
+//	private String description;
+	
+	public Transaction(String t, double a, double b) {
+		type = t;
+		amount = a;
+		balance = b;
+		date = new Date();
+		
+	}
+	@Override
+	public String toString() {
+		return "Date: " + date + "  Type:" + type + "  Amount:" + amount + "\nBalance: " + balance;
+	}
+
+}

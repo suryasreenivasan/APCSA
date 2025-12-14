@@ -1,0 +1,15 @@
+
+public class factorial {
+
+	public static void main(String[] args) {
+
+		int result = 1;
+		for (int factorial = 5; factorial >= 1; factorial--) {
+			result = factorial * result;
+			System.out.println(result);
+		}
+		
+
+	}
+
+}

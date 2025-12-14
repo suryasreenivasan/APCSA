@@ -1,0 +1,52 @@
+// january the fifth
+public class Rational {
+	private int numerator = 0;
+	private int denominator = 1;
+	public Rational() {
+		
+	}
+	public Rational(int n, int d) {
+		if (d == 0) {
+			System.out.println("denominator cannot be zero");
+			System.exit(d);
+		}
+		numerator = n;
+		denominator = d;
+	}
+	public int getNumerator() {
+		return numerator;
+	}
+	
+	public int getDenominator() {
+		return denominator;
+	}
+	
+	public void setNumerator(int n) {
+		numerator = n;
+	}
+	
+	public void setDenominator(int d) {
+		if (d == 0) {
+			System.out.println("denominator cannot be zero");
+			System.exit(d);
+		}
+		denominator = d;
+	}
+	
+	private static int getGCD(int n, int d) {
+		int k = 2;
+		int gcd = 1;
+		while (k <= n && k <= d) {
+			if ((n % k == 0) && (d % k == 0)) {
+				gcd = k;
+			}
+		}
+		return gcd;
+	}
+	
+	private void reduce() {
+		int gcd = getGCD(numerator, denominator);
+		numerator /= gcd;
+		denominator /= gcd;
+	}
+}

@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class CheckingPalindrome {
+
+	public static void main(String[] args) {
+		System.out.println("Enter a string: ");
+		Scanner scanner = new Scanner(System.in);
+		String user = scanner.nextLine();
+		scanner.close();
+		boolean isPalindrome = true;
+		int low = 0;
+		int high = user.length() - 1;
+		while (low < high) {
+			if (!user.substring(low, low+1).equals(user.subSequence(high, high + 1))) {
+				isPalindrome = false;
+				break;
+			}
+			low ++;
+			high--;
+		}
+		if (isPalindrome) {
+			System.out.println(user + " is a palindrome");
+		}
+		else {
+			System.out.println(user + " is not a palindrome");
+		}
+	}
+
+}

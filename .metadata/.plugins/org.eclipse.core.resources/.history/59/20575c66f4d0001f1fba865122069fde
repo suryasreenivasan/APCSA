@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class FiveCards {
+	
+	public static final int NUMBER_OF_CARDS = 5;
+	private Card[] cards = new Card[5];
+	private int changes;
+	private int score;
+	private String history;
+	
+	public FiveCards() {
+		 
+	}
+	
+}

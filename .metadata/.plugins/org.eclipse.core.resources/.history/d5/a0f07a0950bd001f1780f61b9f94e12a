@@ -1,0 +1,24 @@
+
+public class RationalCalculator {
+
+	public static void main(String[] args) {
+		Rational r1 = new Rational();
+		System.out.println("Current global value: " + r1);
+		while (true) {
+			System.out.println("------------------------------------------------");
+			System.out.println("                   Main Menu                    ");
+			System.out.println("------------------------------------------------");
+			System.out.println("c: change the current value");
+			System.out.println("+: add a rational to the current value");
+			System.out.println("-: subtract a rational from the current value");
+			System.out.println("*: multiply by a rational to the current value");
+			System.out.println("/: divide by a rational from the current value");
+			System.out.println("q: quit");
+			System.out.println("------------------------------------------------");
+			System.out.print("enter a command: ");
+		}
+
+	}
+	
+
+}

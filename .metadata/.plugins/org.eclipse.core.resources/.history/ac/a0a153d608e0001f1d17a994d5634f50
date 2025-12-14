@@ -1,0 +1,24 @@
+
+public class CheckingAccount extends Account {
+	private double draftFee = 50;
+	private double overDraftFee = 100;
+	private double lowBalanceFee = 10;
+	
+	public CheckingAccount(String n, int ide, double bal) {
+		super(n, ide, bal);
+	}
+	
+	public void draft() {
+		if (super.getBalance() < 0) {
+		
+		}
+	}
+	
+	public void lowBalance() {
+		if (getBalance() < 20) {
+			setBalance(getBalance() - 10);
+			
+		}
+	}
+	
+}

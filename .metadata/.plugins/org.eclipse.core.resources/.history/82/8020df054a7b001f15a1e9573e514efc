@@ -1,0 +1,17 @@
+
+public class ForLoopPracice {
+
+	public static void main(String[] args) {
+			for (long i = 1000000; i != -1; i--) {
+				System.out.println( "number of women you get: " + i);
+			}
+			
+		/*int sum = 0;
+		for (int i = 1; i <= 100; i++) {
+			sum += i; 
+			System.out.println(sum);
+		}
+		*/
+		}
+
+}

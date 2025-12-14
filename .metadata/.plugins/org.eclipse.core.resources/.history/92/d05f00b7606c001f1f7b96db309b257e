@@ -1,0 +1,12 @@
+/* Name : Surya Sreenivasan / 10
+ * Date : 09/06/2024
+ * Lab 3.7 Point in a Rectangle
+ * */
+public class Lab03_7 {
+
+	public static void main(String[] args) {
+		System.out.print("Sample 1: \n Enter x and y for a point location: ");
+
+	}
+
+}

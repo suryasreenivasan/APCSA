@@ -1,0 +1,35 @@
+
+public class pickacard {
+
+	public static void main(String[] args) {
+		
+		System.out.print("the card you picked: ");
+		int card = (int)(Math.random() * 52);
+		
+		int suit = card / 13;
+		int cardnumber = card % 13;
+		
+		if (cardnumber==0) {
+			System.out.print("ace ");
+		}
+		
+		if (cardnumber == 11) {
+			System.out.print("jack ");
+		}
+		
+		if (cardnumber == 12) {
+			System.out.print("queen ");
+		}
+		
+		if (cardnumber == 13) {
+			System.out.print("king ");
+		}
+		else {
+			System.out.print(cardnumber + " ");
+		}
+		
+		System.out.print("of " + suit);
+		
+	}
+
+}

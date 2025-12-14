@@ -1,0 +1,52 @@
+import javax.sound.sampled.*;
+import java.io.*;
+
+
+public class MooSic {
+    public static void main(String[] args) {
+    	String filePath = "C:\\Users\\Surya\\Downloads\\Java.wav";
+    	System.out.println("to the tune of jingle bell rock\n\n\n\n");
+    	delay(1000);
+    	System.out.println("     J      A     V     V     A        CCCCC   OOOOO  DDDDD   EEEEE");
+        System.out.println("     J     A A     V   V     A A      C       O     O D    D  E    ");
+        System.out.println("     J    A   A     V V     A   A    C        O     O D     D EEEEE");
+        System.out.println(" J   J   AAAAAAA     V     AAAAAAA   C        O     O D    D  E    ");
+        System.out.println("  JJJ   A       A    V   A       A   CCCCC   OOOOO  DDDDD   EEEEE");
+    	delay(5000);
+        try {
+            File musicFile = new File(filePath);
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(musicFile);
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioStream);
+            clip.start();
+            System.out.println("playing. press enter to cancel");
+            displayLyrics();
+            System.in.read();
+            clip.stop();
+            clip.close();
+        } catch (Exception e) {
+            System.err.println("Error playing audio: " + e.getMessage());
+        }
+    }
+    
+    public static void displayLyrics() {
+    	System.out.println("java code, java code, compile and run");
+    	delay();
+    	System.out.println("syntax is sharp, and coding is fun");
+    	System.out.println("loops and conditions, the methods are tight");
+    	System.out.println("debugging through the code all night");
+    	System.out.println("java class, java stack, objects in play");
+    	System.out.println("polymorphism leads the way");
+    	System.out.println("inheritance flows, the program will grow");
+    	System.out.println("oh coding in java's the way to go");
+    	System.out.println("oh java code, java flow");
+    	System.out.println("threads are spinning, watch them flow");
+    	
+    }
+    public static void delay(int t) {
+		double starTime = System.currentTimeMillis();
+		while (System.currentTimeMillis() - starTime < t) {
+			
+		}
+	}
+}
