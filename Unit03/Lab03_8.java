@@ -1,0 +1,37 @@
+/* Name : Surya Sreenivasan / 10
+ * Date : 09/06/2024
+ * Lab 3.8 Simple statistics 
+ */
+
+import java.util.*;
+
+// 1 6 4 5
+public class Lab03_8 {
+
+	public static void main(String[] args) {
+		
+		System.out.print("Enter four numbers: ");
+		Scanner input = new Scanner(System.in);
+		double n1 = input.nextDouble();
+		double n2 = input.nextDouble();
+		double n3 = input.nextDouble();
+		double n4 = input.nextDouble();
+		input.close();
+		double max = n1; 
+		if (n2 > max) max = n2;
+		if (n3 > max) max = n3;
+		if (n4 > max) max = n4;
+		System.out.println("Maxmium: " + max);
+		
+		double min = n1;
+		if (n2 < min) min = n2;
+		if (n3 < min) min = n3;
+		if (n4 < min) min = n4;
+		System.out.println("Minium: " + min);
+		
+		double avg = (n1+n2+n3+n4) / 4;
+		System.out.println("Average: " + avg);
+
+	}
+
+}

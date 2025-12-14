@@ -1,0 +1,30 @@
+
+public class CopyArray {
+
+	public static void main(String[] args) {
+		int[] list1 = new int[5];
+		for (int i = 0; i < list1.length; i++) {
+			list1[i] = i + 1;
+		}
+		int[] list2 =  list1;
+		list1[0] = -100; 
+		printArr(list2);
+		int[] list3 = new int[list1.length];
+		for (int i = 0; i < list1.length; i++) {
+			list3[i] = list1[i];
+		}
+		printArr(list3);
+		list1[list1.length - 1] = 100;
+		printArr(list1);
+		printArr(list2);
+		printArr(list3);
+	}
+
+	public static void printArr(int[] a) {
+		for (int e: a) {
+			System.out.print(e + " ");
+		}
+		System.out.println();
+	}
+	
+}

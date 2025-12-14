@@ -1,0 +1,116 @@
+// play against another human (or more likely yourself)
+
+import java.util.*;
+public class TikTakToe {
+	public static Scanner scanner = new Scanner(System.in);
+	public static void main(String[] args) {
+		System.out.println("play tictactoe!");
+		System.out.println("\ndecide who will be X and who will be O");
+		deLay(5000);
+		char[][] board = new char[3][3];
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[i].length; j++) {
+				board[i][j] = ' ';
+			}
+		}
+		boolean won = false;
+		int turn = 0;
+		
+		char[] players = new char[2];
+		if (Math.random() > 0.5) {
+			players[0] = 'X';
+			players[1] = 'O';
+		}
+		else {
+			players[0] = 'O';
+			players[1] = 'X';
+		}
+		System.out.println("\nFirst player is " + players[0]);
+		System.out.println("Second player is " + players[1]);
+		deLay(3000);
+		while (!won) {
+			displayBoard(board);
+			char player = players[turn % 2];
+			makeMove(board, player);
+			if (win(board, player)) {
+				displayBoard(board);
+				System.out.println("player " + player + " wins!	");
+				break;
+			}
+			draw(board);
+			turn++;
+		}
+	}
+	
+	public static void displayBoard(char[][] c) {
+		for (int i = 0; i < c.length; i++) {
+			System.out.print("\n-------------\r\n");
+			System.out.print("|");
+			for (int j = 0; j < c[i].length; j++) {
+			System.out.print(" " + c[i][j] + " |");	
+			}
+		}
+		System.out.print("\n-------------\r\n");
+	}
+	
+	public static void makeMove(char[][] c, char player) {
+		boolean real = true;
+		while (real) {
+			System.out.println();
+			System.out.println("Player " + player + "\'s move");
+			System.out.print("enter row: ");
+			int row = scanner.nextInt();
+			System.out.println();
+			System.out.print("enter column: ");
+			int column = scanner.nextInt();
+			if (row > 3 || column > 3 || row < 1 || column < 1) {
+				System.out.println("invalid row / column, (1-3)");
+				displayBoard(c);
+				continue;
+			}
+			if (c[row - 1][column - 1] != ' ' ){
+				System.out.println("Cell is already occupied");
+				displayBoard(c);
+				continue;
+			}
+			c[row - 1][column - 1] = player;
+			real = false;
+		}
+		
+	}
+	
+    public static boolean win(char[][] board, char player) {
+    	for (int i = 0; i < board.length; i++) {
+            if ((board[i][0] == player && board[i][1] == player && board[i][2] == player) || (board[0][i] == player && board[1][i] == player && board[2][i] == player)) {
+                return true;
+            }
+        }
+        if ((board[0][0] == player && board[1][1] == player && board[2][2] == player) || (board[0][2] == player && board[1][1] == player && board[2][0] == player)) {
+            return true;
+        }
+        return false;
+    }
+    
+	public static void draw(char[][] c) {
+		for (int i = 0; i < c.length; i++) {
+			for(int j = 0; j < c[i].length; j++) {
+				if(c[i][j] == ' ') {
+					return;
+				}
+			}
+		}
+		System.out.println();
+		displayBoard(c);
+		System.out.println("Draw");
+		System.exit(0);
+	}
+	
+	public static void deLay(int t) {
+		double starTime = System.currentTimeMillis();
+		while (System.currentTimeMillis() - starTime < t) {
+			
+		}
+	}
+	
+		
+}

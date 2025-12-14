@@ -1,0 +1,42 @@
+import java.util.*;
+public class Practice {
+
+	public static void main(String[] args) {
+		int sum = 0;
+		for (int i = 1; i <= 1000; i++) {
+		sum += i;	
+		}
+		System.out.println("Sum from 1 to 1000: " + sum);
+		sum = 0;
+		for (int i = 1; i <= 1000; i++) {
+			if ((i % 2) == 0) {
+				sum += i;
+			}
+		}
+		System.out.println("Even sum from 1 to 1000: " + sum);
+		System.out.print("Enter a string: ");
+		Scanner scanner = new Scanner(System.in);
+		String user = scanner.nextLine();
+		String newstring = "";
+		scanner.close();
+		for (int i = 0; i < user.length(); i++) {
+			if (user.substring(i, i + 1).equals(" ")) {
+				Random random = new Random();
+				int r1 = random.nextInt(10);
+				newstring += r1;
+			}
+			else {
+				newstring += user.substring(i, i+1);
+			}
+		}
+		System.out.println("New string: "+ newstring);
+		int vowel = 0;
+		for (int i = 1; i < user.length(); i++) {
+			if (user.substring(i, i+1).toLowerCase().equals("a") || user.substring(i, i+1).toLowerCase().equals("e") || user.substring(i, i+1).toLowerCase().equals("i") || user.substring(i, i+1).toLowerCase().equals("o") || user.substring(i, i+1).toLowerCase().equals("u")) {
+				vowel++;
+			}
+		}
+		System.out.println("Number of vowels: " + vowel);
+	}
+
+}

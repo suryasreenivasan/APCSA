@@ -1,0 +1,48 @@
+/* Name : Surya Sreenivasan / 10
+ * Date : 09/13/2024
+ * Lab 4.3 phoneKeypad
+ */
+import java.util.*;
+public class phoneKeypad {
+
+	public static void main(String[] args) {
+		System.out.print("Enter a letter: "); 
+		Scanner scanner = new Scanner(System.in);
+		String letter = scanner.next().substring(0,1).toUpperCase();
+		scanner.close();
+		
+		int number = 0;
+		if (letter.equals("A") || letter.equals("B") || letter.equals("C") ) {
+			number = 2; 
+		}
+		else if (letter.equals("D") || letter.equals("E") || letter.equals("F")) {
+			number = 3;
+		}
+		else if (letter.equals("G") || letter.equals("H") || letter.equals("I")) {
+			number = 4;
+		}
+		else if (letter.equals("J") || letter.equals("K") || letter.equals("L")) {
+			number = 5;
+		}
+		else if (letter.equals("M") || letter.equals("N") || letter.equals("O")) {
+			number = 6;
+		}
+		else if (letter.equals("P") || letter.equals("Q") || letter.equals("R") || letter.equals("S")) {
+			number = 7;
+		}
+		else if (letter.equals("T") || letter.equals("U") || letter.equals("V")) {
+			number = 8;
+		}
+		else if (letter.equals("W") || letter.equals("X") || letter.equals("Y") || letter.equals("Z")) {
+			number = 9;
+		}
+		else {
+			System.out.println("Invalid input.");
+			System.exit(0);
+		}
+		System.out.println("The correspnding number: " + number);
+		
+
+	}
+
+}

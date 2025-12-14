@@ -1,0 +1,36 @@
+
+public class PracticeArray {
+
+	public static void main(String[] args) {
+		int[] list1 = {1, 2, 3, 4, 5};
+		int[] list2 = list1;
+		
+		//doubleArray(list1);
+		int[] list3 = doubleArrayNew(list1);
+		ProcessArray.printArr(list1);
+		ProcessArray.printArr(list2);                                                                                                                                                                                                        
+		ProcessArray.printArr(list3);
+		
+	}
+	
+	public static void doubleArray(int[] a) {
+		for (int i = 0; i < a.length; i++) {
+			a[i] *= 2;
+		}
+	}
+	
+	public static int[] doubleArrayNew(int[] a) {
+		int result[] = new int[a.length];
+		for (int i = 0; i < a.length; i++) {
+			result[i] = a[i] * 2;
+		}
+		return result;
+	}
+	public static int[] reverseArr(int[] a) {
+		int[] result = new int[a.length];
+		for (int i = 0; i < a.length; i++) {
+			result[i] = a[a.length - 1 - i];
+		}
+		return result;
+	}
+}

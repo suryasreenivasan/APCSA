@@ -1,0 +1,84 @@
+import java.util.*;
+
+public class TwoDArray {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+	public static int[][] inputArr(int row, int col){
+		int[][] result = new int[row][col];
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("enter " + row + " rows of " + col +  " integers: ");
+		for (int r = 0; r < row; r++) {
+			for (int c = 0; c < col; c++) {
+				result[r][c] = scanner.nextInt();
+			}
+		}
+		scanner.close();
+		return result;
+	}
+	
+	public static void print2dArr(double[][] m) {
+		for (int r = 0; r < m.length; r++) {
+			for (int c = 0; c < m[r].length; c++) {
+				System.out.print(m[r][c] + " ");
+			}
+			System.out.println();
+		}
+		System.out.println();
+	}
+	
+	public static void print2dArr1(int[][] m) {
+		for (int[] a: m) {
+			for(int e: a) {
+				System.out.print(e + " ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public static double[][] random2dArray(int row, int column) {
+		double[][] result = new double[row][column];
+		Random random = new Random();
+		for (int i = 0; i < result.length; i++) {
+			for (int j = 0;  j < result[i].length; j++) {
+				result[i][j] = random.nextDouble(99) + 1; 
+			}
+		}
+		return result;
+	}
+	
+	public static int sum2DArr1(int[][] m) {
+		int sum = 0;
+		for (int r = 0; r < m.length; r++) {
+			for (int c = 0; c < m[r].length; c++) {
+				sum += m[r][c];
+			}
+		}
+		return sum;
+	}
+	
+	public static void sum2DArrByColumn(int[][] m) {
+		
+		for (int c = 0; c < m[0].length; c++) {
+			int sumCol = 0;
+			for (int r = 0; r < m.length; r++) {
+				sumCol += m[r][c];
+			}
+			System.out.println("sum of column " + c + ": " + sumCol);
+		}
+	}
+	
+	public static int sum2DArr2(int[][] m) {
+		int sum = 0;
+		for (int[] a: m) {
+			for (int e: a) {
+				sum += e;
+			}
+		}
+		return sum;
+	}
+
+}

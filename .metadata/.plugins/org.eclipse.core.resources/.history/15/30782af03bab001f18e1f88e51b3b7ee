@@ -1,8 +1,0 @@
-
-public class depths {
-    public static void main(String[] args) {
-    	for (int i = 0; i < 10; i++)
-    		System.out.println("roblox");
-    	System.out.println("e");
-    }
-}

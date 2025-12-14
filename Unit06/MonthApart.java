@@ -1,0 +1,31 @@
+// 4 15 5 15 - true
+// 4 16 5 15 - false
+import java.util.*;
+public class MonthApart {
+
+	public static void main(String[] args) {
+		System.out.print("enter an integer: ");
+		Scanner scanner = new Scanner(System.in);
+		int n1 = scanner.nextInt();
+		System.out.print("enter another integer: ");
+		int n2 = scanner.nextInt();
+		System.out.print("enter another integer: ");
+		int n3 = scanner.nextInt();
+		System.out.print("enter another integer: ");
+		int n4 = scanner.nextInt();
+		scanner.close();
+		
+		if (monthApart(n1, n2, n3, n4)) {
+			System.out.println(n1 + ", " + n2 + ", " + n3 + ", " + n4 + " is a month apart");
+		}
+		else {
+			System.out.println(n1 + ", " + n2 + ", " + n3 + ", " + n4 + " is not month apart");
+		}
+	}
+	
+	public static boolean monthApart(int m1, int d1, int m2, int d2) {
+		boolean isMonthApart = (m2 - m1 > 1) || (m1 - m2 > 1) || (m2 - m1 == 1 && d1 <= d2) || (m1 - m2 == 1 && d1 >= d2);
+		return isMonthApart;
+	}
+
+}

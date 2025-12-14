@@ -1,0 +1,21 @@
+import java.util.*;
+public class alphabeticalcitys {
+
+	public static void main(String[] args) {
+		System.out.print("Enter first city: ");
+		Scanner scanner = new Scanner(System.in);
+		String city1 = scanner.nextLine();
+		System.out.print("Enter second city: ");
+		String city2 = scanner.nextLine();
+		scanner.close();
+		int difference = (city1.toLowerCase()).compareTo(city2.toLowerCase());
+		if (difference > 0) {
+			System.out.println(city2 + " " + city1);
+		}
+		else {
+			System.out.println(city1 + " " + city2);
+		}
+		
+	}
+
+}

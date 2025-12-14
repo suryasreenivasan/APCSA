@@ -1,0 +1,18 @@
+/* Name : Surya Sreenivasan / 10
+ * Date : 09/04/2024
+ * Lab 3.1 
+ */
+// (int)Math.random()*(max-min+1)) + min;
+public class Lab03_1 {
+
+	public static void main(String[] args) {
+		int SATScore = (int)(Math.random()*(1201)+400);
+		System.out.println("SAT score: " + SATScore);
+		if (SATScore>=1200) {
+			System.out.println("You are admitted.");
+		}
+		else {
+			System.out.println("You are not admitted");
+		}
+	}
+}

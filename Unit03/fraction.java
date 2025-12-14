@@ -1,0 +1,45 @@
+import java.util.*; 
+public class fraction {
+
+	public static void main(String[] args) {
+		System.out.print("Enter a numerator: ");
+		Scanner scanner = new Scanner(System.in);
+		int numerator = scanner.nextInt();
+		System.out.print("Enter a denominator: ");
+		int denominator = scanner.nextInt();
+		scanner.close();
+		
+		
+		if (denominator == 0) {
+			System.out.println("Invalid Input.");
+			System.exit(0);
+		}
+		else if (numerator == 0) {
+			System.out.println(numerator + "/" + denominator + " is a proper fraction that can be reduced to 0");
+			System.exit(0);
+		}
+		
+		else if (numerator > denominator) {
+		
+			int whole_number = numerator / denominator;
+			int remainder = numerator % denominator; 
+			
+			if (numerator % denominator == 0) {
+				System.out.println(numerator + "/" + denominator + " is an improper fraction and it can be reduced to " + whole_number);
+			}
+			else {
+				System.out.println(numerator + "/" + denominator + " is an improper fraction and it's mixed fraction is " + whole_number + " + " + remainder + "/" + denominator);
+			}
+		}
+		
+		else if (numerator == denominator) {
+			System.out.println(numerator + "/" + denominator  + " is an improper fraction which can be reduced to 1");
+		}
+		else {
+			System.out.println(numerator + "/"+ denominator +" is a proper fraction");
+		}
+		
+
+	}
+
+}

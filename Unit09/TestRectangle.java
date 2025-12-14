@@ -1,0 +1,15 @@
+
+public class TestRectangle {
+
+	public static void main(String[] args) {
+		Rectangle r1 = new Rectangle();
+		Rectangle r2 = new Rectangle(2, 3);
+		System.out.println(r1);
+		System.out.println("the height and width of r2 are " + r2.getHeight() + " and " + r2.getWidth() + " respectively");
+		r1.setHeight(10);
+		r1.setWidth(5);
+		System.out.println("the area of r1 is " +  r1.getArea() + " and the perimeter is " + r1.getPerimeter());
+		
+	}
+
+}

@@ -1,0 +1,47 @@
+import java.util.*;
+
+
+	
+public class GeometricObject {
+	private String color;
+	private boolean filled;
+	private Date date = new Date();
+
+	public GeometricObject(String c, boolean fill) {
+		color = c;
+		filled = fill;
+	}
+	
+	public GeometricObject() {
+		this("white", false);
+	}
+	
+	public String getColor() {
+		return color;
+	}
+	
+	public void setColor(String c) {
+		color = c;
+	}
+	
+	public boolean isFilled() {
+		return filled;
+	}
+	
+	public void setFilled(boolean f) {
+		filled = f;
+	}
+	public Date getDate() {
+		return date;
+	}
+	
+	@Override
+	public String toString() {
+		return "the geometric object was created on " + date + ", its color is " + color + " and it is " + ((filled) ? " filled." : " not filled."); 
+	}
+	
+	
+	
+	
+	
+}
